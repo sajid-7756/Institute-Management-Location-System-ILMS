@@ -1,6 +1,5 @@
-import React from "react";
 import { CiBank } from "react-icons/ci";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   const links = (
@@ -49,10 +48,10 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="text-xl flex items-center gap-2">
+          <Link to={'/'} className="text-xl flex items-center gap-2">
             <CiBank size={30} />{" "}
             <span className="font-bold text-primary">ILMS</span>
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -60,7 +59,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn btn-primary">Contact Us</a>
         </div>
       </div>
     </div>
