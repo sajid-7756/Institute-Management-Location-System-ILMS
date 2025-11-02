@@ -43,7 +43,7 @@ const departments = [
     name: "Power Engineering",
     desc: "Dedicated to energy generation, renewable sources, and efficient transmission networks.",
     icon: <FaSolarPanel className="text-4xl text-success" />,
-    image: "https://via.placeholder.com/600x400?text=Power",
+    image: "blob:https://labs.google/dfa8f694-cfc0-4740-ac8b-8e204b298324",
   },
   {
     id: 6,
