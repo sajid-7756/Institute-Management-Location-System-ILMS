@@ -8,6 +8,14 @@ import {
   FaSnowflake,
   FaMicrochip,
 } from "react-icons/fa";
+import cstSm2 from "../assets/cstSm2.jpeg";
+import civilSm from "../assets/civilSm.jpeg";
+import mechanicalSm from "../assets/mechanicalSm.jpeg";
+import powerSm from "../assets/powerSm.jpeg";
+import racSm from "../assets/rac.jpeg";
+import electronicsSm from "../assets/electronicsSm.jpeg";
+import elecSm from "../assets/elecSm.jpeg";
+import toast from "react-hot-toast";
 
 const departments = [
   {
@@ -15,49 +23,49 @@ const departments = [
     name: "Computer Science & Technology (CST)",
     desc: "Explores software engineering, AI, and cutting-edge computing solutions that shape the digital future.",
     icon: <FaLaptopCode className="text-4xl text-primary" />,
-    image: "https://via.placeholder.com/600x400?text=CST",
+    image: cstSm2,
   },
   {
     id: 2,
     name: "Civil Engineering",
     desc: "Designs sustainable infrastructure including bridges, roads, and smart cities for modern living.",
     icon: <FaDraftingCompass className="text-4xl text-secondary" />,
-    image: "https://via.placeholder.com/600x400?text=Civil",
+    image: civilSm,
   },
   {
     id: 3,
     name: "Mechanical Engineering",
     desc: "Focuses on machines, robotics, and manufacturing systems that power industries worldwide.",
     icon: <FaCogs className="text-4xl text-accent" />,
-    image: "https://via.placeholder.com/600x400?text=Mechanical",
+    image: mechanicalSm,
   },
   {
     id: 4,
     name: "Electrical Engineering",
     desc: "Specializes in circuits, automation, and smart power systems driving innovation in technology.",
     icon: <FaBolt className="text-4xl text-warning" />,
-    image: "https://via.placeholder.com/600x400?text=Electrical",
+    image: elecSm,
   },
   {
     id: 5,
     name: "Power Engineering",
     desc: "Dedicated to energy generation, renewable sources, and efficient transmission networks.",
     icon: <FaSolarPanel className="text-4xl text-success" />,
-    image: "blob:https://labs.google/dfa8f694-cfc0-4740-ac8b-8e204b298324",
+    image: powerSm,
   },
   {
     id: 6,
     name: "Refrigeration & Air Conditioning (RAC)",
     desc: "Covers HVAC systems, cooling technologies, and sustainable thermal solutions.",
     icon: <FaSnowflake className="text-4xl text-info" />,
-    image: "https://via.placeholder.com/600x400?text=RAC",
+    image: racSm,
   },
   {
     id: 7,
     name: "Electronics Engineering",
     desc: "Deals with embedded systems, microelectronics, and communication technologies.",
     icon: <FaMicrochip className="text-4xl text-error" />,
-    image: "https://via.placeholder.com/600x400?text=Electronics",
+    image: electronicsSm,
   },
 ];
 
@@ -122,7 +130,10 @@ const Department = () => {
                 <p className="text-base-content/80 leading-relaxed">
                   {dept.desc}
                 </p>
-                <button className="btn btn-outline btn-primary btn-sm mt-3">
+                <button
+                  onClick={() => toast("This feature is comming soon")}
+                  className="btn btn-outline btn-primary btn-sm mt-3"
+                >
                   Learn More
                 </button>
               </div>

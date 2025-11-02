@@ -3,6 +3,7 @@ import RootLayout from "../Layouts/RootLayout";
 import Home from "../Pages/Home";
 import Map from "../Pages/Map";
 import Department from "../Pages/Department";
+import Gallery from "../Pages/Gallery";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: "/departments",
         Component: Department,
+      },
+      {
+        path: "/gallery",
+        Component: Gallery,
       },
       {
         path: "/map",
