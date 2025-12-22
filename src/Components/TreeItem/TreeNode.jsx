@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { User, ChevronDown, ChevronUp } from "lucide-react";
 import principal from "../../assets/principal.jpeg";
+import { Link } from "react-router";
 
 const TreeNode = ({ data, onCardClick, level = 0 }) => {
   const [isExpanded, setIsExpanded] = useState(true);
@@ -52,7 +53,12 @@ const TreeNode = ({ data, onCardClick, level = 0 }) => {
           >
             {data.name}
           </h3>
-          <p className="text-xs opacity-90 font-medium">{data.position}</p>
+          <div className="space-y-2">
+            <p className="text-xs opacity-90 font-medium badge badge-soft badge-primary">
+              {data.position}
+            </p>
+            <p className="text-xs opacity-90 font-bold">{data.email}</p>
+          </div>
           {hasChildren && isPrincipal && (
             <button
               onClick={() => setIsExpanded(!isExpanded)}
@@ -106,6 +112,11 @@ const TreeNode = ({ data, onCardClick, level = 0 }) => {
                 />
               </div>
             ))}
+          </div>
+          <div className="mt-10">
+            <button className="btn btn-primary">
+              <Link to={"/others"}>Others</Link>
+            </button>
           </div>
         </>
       )}

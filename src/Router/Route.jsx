@@ -4,6 +4,7 @@ import Home from "../Pages/Home";
 import Map from "../Pages/Map";
 import Department from "../Pages/Department";
 import Gallery from "../Pages/Gallery";
+import Others from "../Pages/Others";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/map",
         Component: Map,
+      },
+      {
+        path: "/others",
+        Component: Others,
       },
     ],
   },

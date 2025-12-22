@@ -8,6 +8,7 @@ const DepartmentTree = () => {
   const instituteData = {
     name: "Md. Shafiqul Islam",
     position: "Principal",
+    email: 'principal@mail.com',
     departments: [
       {
         name: "CST",
