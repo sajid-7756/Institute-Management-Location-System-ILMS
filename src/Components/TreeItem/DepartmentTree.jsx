@@ -8,19 +8,13 @@ const DepartmentTree = () => {
   const instituteData = {
     name: "Md. Shafiqul Islam",
     position: "Principal",
-    email: 'principal@mail.com',
+    email: "principal@mail.com",
     departments: [
       {
         name: "CST",
         position: "Department",
         ci1: "Mr. Manna Mehedi Bakul",
         ci2: "Mst. Nurzahan",
-      },
-      {
-        name: "Civil",
-        position: "Department",
-        ci1: "Mr. Nurul Amin",
-        ci2: "Mr. D",
       },
       {
         name: "Electrical",
@@ -41,6 +35,12 @@ const DepartmentTree = () => {
         position: "Department",
         ci1: "Mr. M",
         ci2: "Mr. N",
+      },
+      {
+        name: "Civil",
+        position: "Department",
+        ci1: "Mr. Nurul Amin",
+        ci2: "Mr. D",
       },
     ],
   };
