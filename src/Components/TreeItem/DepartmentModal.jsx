@@ -36,9 +36,6 @@ const DepartmentModal = ({ department, onClose }) => {
           </button>
 
           <div className="flex items-center gap-5 relative z-10">
-            <div className="bg-white rounded-2xl p-5 shadow-lg">
-              <User className="w-14 h-14 text-indigo-600" />
-            </div>
             <div>
               <h2 className="text-4xl font-bold mb-1">
                 Department of {department.name}
@@ -63,6 +60,13 @@ const DepartmentModal = ({ department, onClose }) => {
               </h3>
             </div>
             <p className="text-2xl font-bold text-gray-800">{department.ci1}</p>
+            <p className="font-bold text-gray-800">
+              Email: {department.ci1Email}
+            </p>
+            <p className="font-bold text-gray-800">
+              Phone: {department.ci1Phone}
+            </p>
+            <p className="font-bold text-gray-800">Location: </p>
           </div>
 
           <div className="bg-linear-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-100">
@@ -79,6 +83,13 @@ const DepartmentModal = ({ department, onClose }) => {
               </h3>
             </div>
             <p className="text-2xl font-bold text-gray-800">{department.ci2}</p>
+            <p className="font-bold text-gray-800">
+              Email: {department.ci2Email}
+            </p>
+            <p className="font-bold text-gray-800">
+              Phone: {department.ci2Phone}
+            </p>
+            <p className="font-bold text-gray-800">Location: </p>
           </div>
         </div>
 

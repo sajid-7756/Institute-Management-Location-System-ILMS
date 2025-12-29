@@ -57,7 +57,16 @@ const TreeNode = ({ data, onCardClick, level = 0 }) => {
             <p className="text-xs opacity-90 font-medium badge badge-soft badge-primary">
               {data.position}
             </p>
-            <p className="text-xs opacity-90 font-bold">{data.email}</p>
+            {isPrincipal && (
+              <>
+                <p className="text-xs opacity-90 font-bold">
+                  Email: {data.email}
+                </p>
+                <p className="text-xs opacity-90 font-bold">
+                  Telephone: {data.phone}
+                </p>
+              </>
+            )}
           </div>
           {hasChildren && isPrincipal && (
             <button

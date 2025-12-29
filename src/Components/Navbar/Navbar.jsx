@@ -73,7 +73,7 @@ const Navbar = () => {
             to="/"
             className="text-xl flex items-center gap-2 hover:scale-105 transition-transform duration-300"
           >
-            <img src={logo} className="w-12 h-12" alt="logo" />
+            <img src={logo} className="w-10 h-10" alt="logo" />
             <span className="font-bold text-primary">ILMS</span>
           </NavLink>
         </div>
