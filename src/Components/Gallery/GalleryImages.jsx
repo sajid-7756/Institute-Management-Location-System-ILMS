@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { MasonryPhotoAlbum } from "react-photo-album";
 import InfiniteScroll from "react-photo-album/scroll";
+import Lightbox from "yet-another-react-lightbox";
+import "react-photo-album/styles.css";
+import "yet-another-react-lightbox/styles.css";
 import img1 from "../../assets/1.jpg";
 import img2 from "../../assets/2.jpg";
 import img3 from "../../assets/3.jpg";
@@ -27,15 +30,16 @@ import img23 from "../../assets/23.jpeg";
 import img24 from "../../assets/24.jpeg";
 
 const GalleryImages = () => {
-  const photos = [
+  const PAGE_SIZE = 12;
+  const photosData = [
     { src: img1, width: 1200, height: 800 },
     { src: img2, width: 800, height: 1200 },
-    { src: img3, width: 1000, height: 700 },
-    { src: img4, width: 900, height: 1100 },
+    { src: img3, width: 1000, height: 1000 },
+    { src: img4, width: 900, height: 800 },
     { src: img5, width: 1100, height: 850 },
     { src: img6, width: 800, height: 800 },
     { src: img7, width: 1200, height: 900 },
-    { src: img8, width: 750, height: 1050 },
+    { src: img8, width: 750, height: 700 },
     { src: img9, width: 1000, height: 800 },
     { src: img10, width: 900, height: 700 },
     { src: img11, width: 850, height: 1150 },
@@ -54,27 +58,27 @@ const GalleryImages = () => {
     { src: img24, width: 900, height: 1150 },
   ];
 
-  const PAGE_SIZE = 12;
-  const initialPhotos = photos.slice(0, PAGE_SIZE);
+  const initialPhotos = photosData.slice(0, PAGE_SIZE);
+
+  const [open, setOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [lightboxPhotos, setLightboxPhotos] = useState(initialPhotos);
 
   const fetchPhotos = async (index) => {
-    // Wait a bit to simulate network and prevent rapid jumps
-    await new Promise((resolve) => setTimeout(resolve, 800));
+    await new Promise((r) => setTimeout(r, 600));
 
-    const start = (index * PAGE_SIZE) % photos.length;
+    const start = (index * PAGE_SIZE) % photosData.length;
     const end = start + PAGE_SIZE;
 
-    let page = photos.slice(start, end);
+    let page = photosData.slice(start, end);
 
     if (page.length < PAGE_SIZE) {
-      page = page.concat(photos.slice(0, PAGE_SIZE - page.length));
+      page = page.concat(photosData.slice(0, PAGE_SIZE - page.length));
     }
 
-    // Add unique identifiers to prevent React key collisions when images repeat
-    return page.map((photo, i) => ({
-      ...photo,
-      key: `${photo.src}-${index}-${i}`,
-    }));
+    setLightboxPhotos((prev) => [...prev, ...page]);
+
+    return page;
   };
 
   return (
@@ -83,6 +87,10 @@ const GalleryImages = () => {
         photos={initialPhotos}
         fetch={fetchPhotos}
         singleton
+        onClick={({ index }) => {
+          setCurrentIndex(index);
+          setOpen(true);
+        }}
         loading={
           <div className="flex justify-center py-8">
             <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
@@ -96,15 +104,16 @@ const GalleryImages = () => {
       >
         <MasonryPhotoAlbum
           photos={initialPhotos}
-          columns={(containerWidth) => {
-            if (containerWidth < 640) return 1;
-            if (containerWidth < 768) return 2;
-            if (containerWidth < 1024) return 3;
-            return 4;
-          }}
           spacing={16}
+          columns={(w) => (w < 640 ? 1 : w < 768 ? 2 : w < 1024 ? 3 : 4)}
         />
       </InfiniteScroll>
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        index={currentIndex}
+        slides={lightboxPhotos.map((p) => ({ src: p.src }))}
+      />
     </div>
   );
 };

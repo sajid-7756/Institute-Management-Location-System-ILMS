@@ -15,7 +15,7 @@ import elecCI2Img from "../../assets/etCI2.jpg";
 
 // Electronics
 import entCI1Img from "../../assets/entCI1.jpg";
-import entCI2Img from "../../assets/entCI2.jpg";
+import entCI2Img from "../../assets/entCI2.png";
 
 // Mechanical
 import mechCI1Img from "../../assets/mtCI1.jpg";

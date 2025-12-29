@@ -3,19 +3,25 @@ import React from "react";
 const Map = () => {
   return (
     <section className="py-16">
-      <div className="w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Heading Section */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl font-bold text-primary mb-4">
             📍 Location Map
           </h2>
           <p className="text-base-content/80 leading-relaxed text-lg">
-            Explore the exact location of{" "}
+            Find us easily at the heart of the city. Explore the exact location of{" "}
             <strong className="text-primary">
               Bogura Polytechnic Institute
             </strong>{" "}
             on the interactive Google Map below.
           </p>
+
+          <div className="flex justify-center gap-4 mt-6 flex-wrap">
+            <span className="badge badge-primary badge-lg">Interactive Map</span>
+            <span className="badge badge-secondary badge-lg">Central Location</span>
+            <span className="badge badge-accent badge-lg">Easy Access</span>
+          </div>
 
           {/* Divider */}
           <div className="w-24 h-1 bg-linear-to-r from-primary to-secondary mx-auto mt-6 rounded-full"></div>

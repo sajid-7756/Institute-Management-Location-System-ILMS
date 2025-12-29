@@ -5,6 +5,7 @@ import { RouterProvider } from "react-router";
 import router from "./Router/Route.jsx";
 import { Toaster } from "react-hot-toast";
 import "react-photo-album/styles.css";
+import "yet-another-react-lightbox/styles.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

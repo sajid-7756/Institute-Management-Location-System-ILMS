@@ -4,34 +4,33 @@ import { Camera, Image } from "lucide-react";
 
 const Gallery = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      {/* Header Section */}
-      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="container mx-auto px-4 max-w-7xl relative z-10">
-          <div className="text-center space-y-4">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Camera className="w-12 h-12 animate-pulse" />
-              <h1 className="text-4xl md:text-5xl font-bold">Institute Gallery</h1>
-            </div>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-              Explore the vibrant moments and memories captured at our institute. 
-              From academic achievements to cultural celebrations.
-            </p>
-            <div className="flex items-center justify-center gap-2 text-sm text-white/80">
-              <Image className="w-4 h-4" />
-              <span>24 Photos</span>
-            </div>
-          </div>
-        </div>
-        {/* Decorative Elements */}
-        <div className="absolute top-0 left-0 w-72 h-72 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
-      </div>
+    <section className="py-16">
+      <div className="max-w-7xl mx-auto px-6 text-center">
+        {/* Heading Section */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-4xl font-bold text-primary mb-4">
+            🖼️ Institute Gallery
+          </h2>
+          <p className="text-base-content/80 leading-relaxed text-lg text-center">
+            Explore the vibrant moments and memories captured at our institute.
+            From academic achievements to cultural celebrations, witness the
+            vibrant life of <strong className="text-primary">Bogura Polytechnic Institute</strong>.
+          </p>
 
-      {/* Gallery Component */}
-      <GalleryImages />
-    </div>
+          <div className="flex justify-center gap-4 mt-6 flex-wrap">
+            <span className="badge badge-primary badge-lg">Infinite Scroll</span>
+            <span className="badge badge-secondary badge-lg">Masonry Grid</span>
+            <span className="badge badge-accent badge-lg">Interactive</span>
+          </div>
+
+          {/* Divider */}
+          <div className="w-24 h-1 bg-linear-to-r from-primary to-secondary mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        {/* Gallery Component */}
+        <GalleryImages />
+      </div>
+    </section>
   );
 };
 

@@ -77,7 +77,7 @@ const Others = () => {
           <div className="flex justify-center gap-4 mt-6 flex-wrap">
             <span className="badge badge-primary badge-lg">6 Facilities</span>
             <span className="badge badge-secondary badge-lg">
-              24/7 Support
+              Excellent Support
             </span>
             <span className="badge badge-accent badge-lg">Student First</span>
           </div>
