@@ -1,18 +1,56 @@
-# React + Vite
+# Bogura Polytechnic Institute - Campus Portal 🏫✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official digital gateway for **Bogura Polytechnic Institute**. This application is built to make it easy for students, parents, and visitors to explore our campus, learn about our facilities, and stay connected with our community.
 
-Currently, two official plugins are available:
+## 🌟 What is this for?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The goal of this app is to bring our institute closer to you. Whether you are a new student trying to find your way around or a visitor looking to see what our campus life looks like, this portal is your go-to guide.
 
-## React Compiler
+## 📸 Explore Our Journey (Gallery)
+Take a digital tour of our institute! Our **Smart Gallery** lets you:
+- Scroll through hundreds of high-quality photos of campus life, academic events, and celebrations.
+- Click on any photo to see it in full detail and browse through memories.
+- Experience a smooth, never-ending feed of photos that loads as you scroll.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 📍 Find Us Easily (Interactive Map)
+Never get lost again! Our **Live Map** helps you:
+- See the exact location of Bogura Polytechnic Institute in the city.
+- Use the interactive map to get directions directly from your phone.
+- Find quick information like our office hours and how to contact us.
 
-Note: This will impact Vite dev & build performances.
+## 🏢 Services & Facilities
+Learn about everything our campus has to offer beyond just classrooms:
+- **Student Hostels**: Information about where our students live and grow.
+- **Administrative Support**: Where to go for registration and official help.
+- **Campus Mosque & Canteen**: Places for spiritual peace and healthy meals.
+- **Emergency & Security**: How we keep our campus safe 24/7.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technical Details
+
+For developers interested in the tech stack:
+- **Framework**: React 19 (Vite)
+- **Styling**: Tailwind CSS 4.0 & DaisyUI
+- **Gallery & Lightbox**: `react-photo-album`, `yet-another-react-lightbox`
+- **Navigation**: `react-router`
+- **Icons**: `lucide-react`, `react-icons`
+
+### 🚀 Getting Started
+
+1. **Clone the project**:
+   ```bash
+   git clone https://github.com/sajid-7756/Institute-Management-Location-System-ILMS.git
+   ```
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Launch the app**:
+   ```bash
+   npm run dev
+   ```
+
+---
+
+*Developed with ❤️ by **Ashik, Nurnobi, Shagor, Tanvin, Rishat, Sompa, Atiah, Toya, Rahul & Sajid** for the community of Bogura Polytechnic Institute.*
