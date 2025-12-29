@@ -56,8 +56,8 @@ const facilities = [
 
 const Others = () => {
   return (
-    <section className="py-16 bg-base-200">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-16">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Heading + Long Description */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl font-bold text-primary mb-4">

@@ -71,75 +71,73 @@ const departments = [
 
 const Department = () => {
   return (
-    <section className="py-16 bg-base-200">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Heading + Long Description */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold text-primary mb-4">
-            ⚙️ Explore Our Departments
-          </h2>
-          <p className="text-base-content/80 leading-relaxed text-lg">
-            From circuits to structures, cooling systems to code — our
-            departments open doors to innovation and real-world solutions.
-          </p>
+    <section className="py-16">
+      {/* Heading + Long Description */}
+      <div className="text-center max-w-3xl mx-auto mb-16">
+        <h2 className="text-4xl font-bold text-primary mb-4">
+          ⚙️ Explore Our Departments
+        </h2>
+        <p className="text-base-content/80 leading-relaxed text-lg">
+          From circuits to structures, cooling systems to code — our departments
+          open doors to innovation and real-world solutions.
+        </p>
 
-          {/* Motto */}
-          <p className="mt-4 text-secondary font-semibold">
-            "Innovation • Sustainability • Excellence"
-          </p>
+        {/* Motto */}
+        <p className="mt-4 text-secondary font-semibold">
+          "Innovation • Sustainability • Excellence"
+        </p>
 
-          {/* Quick Stats */}
-          <div className="flex justify-center gap-4 mt-6 flex-wrap">
-            <span className="badge badge-primary badge-lg">7 Departments</span>
-            <span className="badge badge-secondary badge-lg">
-              Hands-on Learning
-            </span>
-            <span className="badge badge-accent badge-lg">Future Ready</span>
-          </div>
-
-          {/* Divider */}
-          <div className="w-24 h-1 bg-linear-to-r from-primary to-secondary mx-auto mt-6 rounded-full"></div>
+        {/* Quick Stats */}
+        <div className="flex justify-center gap-4 mt-6 flex-wrap">
+          <span className="badge badge-primary badge-lg">7 Departments</span>
+          <span className="badge badge-secondary badge-lg">
+            Hands-on Learning
+          </span>
+          <span className="badge badge-accent badge-lg">Future Ready</span>
         </div>
 
-        {/* Department List */}
-        <div className="space-y-20">
-          {departments.map((dept, index) => (
-            <div
-              key={dept.id}
-              className={`flex flex-col md:flex-row items-center gap-10 ${
-                index % 2 === 1 ? "md:flex-row-reverse" : ""
-              }`}
-              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-              data-aos-duration="1000"
-            >
-              {/* Image */}
-              <div className="md:w-1/2">
-                <img
-                  src={dept.image}
-                  alt={dept.name}
-                  className="rounded-2xl shadow-xl w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+        {/* Divider */}
+        <div className="w-24 h-1 bg-linear-to-r from-primary to-secondary mx-auto mt-6 rounded-full"></div>
+      </div>
 
-              {/* Content */}
-              <div className="md:w-1/2 space-y-4">
-                <div className="flex items-center gap-3">
-                  {dept.icon}
-                  <h3 className="text-2xl font-semibold">{dept.name}</h3>
-                </div>
-                <p className="text-base-content/80 leading-relaxed">
-                  {dept.desc}
-                </p>
-                <button
-                  onClick={() => toast("This feature is comming soon")}
-                  className="btn btn-outline btn-primary btn-sm mt-3"
-                >
-                  Learn More
-                </button>
-              </div>
+      {/* Department List */}
+      <div className="space-y-20">
+        {departments.map((dept, index) => (
+          <div
+            key={dept.id}
+            className={`flex flex-col md:flex-row items-center gap-10 ${
+              index % 2 === 1 ? "md:flex-row-reverse" : ""
+            }`}
+            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+            data-aos-duration="1000"
+          >
+            {/* Image */}
+            <div className="md:w-1/2">
+              <img
+                src={dept.image}
+                alt={dept.name}
+                className="rounded-2xl shadow-xl w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
+              />
             </div>
-          ))}
-        </div>
+
+            {/* Content */}
+            <div className="md:w-1/2 space-y-4">
+              <div className="flex items-center gap-3">
+                {dept.icon}
+                <h3 className="text-2xl font-semibold">{dept.name}</h3>
+              </div>
+              <p className="text-base-content/80 leading-relaxed">
+                {dept.desc}
+              </p>
+              <button
+                onClick={() => toast("This feature is comming soon")}
+                className="btn btn-outline btn-primary btn-sm mt-3"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

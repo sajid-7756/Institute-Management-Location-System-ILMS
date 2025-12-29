@@ -41,7 +41,7 @@ const DepartmentModal = ({ department, onClose }) => {
             </div>
             <div>
               <h2 className="text-4xl font-bold mb-1">
-                 Department of {department.name}
+                Department of {department.name}
               </h2>
               <p className="text-lg text-indigo-100">Chief Instructors</p>
             </div>
@@ -51,8 +51,12 @@ const DepartmentModal = ({ department, onClose }) => {
         <div className="p-8 space-y-4">
           <div className="bg-linear-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100">
             <div className="flex items-center gap-3 mb-3">
-              <div className="bg-blue-500 rounded-xl p-2">
-                <User className="w-5 h-5 text-white" />
+              <div className="rounded-xl">
+                <img
+                  src={department.ci1Image}
+                  alt={department.ci1}
+                  className="w-15  h-15 rounded-full"
+                />
               </div>
               <h3 className="font-bold text-gray-800 text-lg">
                 Chief Instructor (1st Shift)
@@ -63,8 +67,12 @@ const DepartmentModal = ({ department, onClose }) => {
 
           <div className="bg-linear-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-100">
             <div className="flex items-center gap-3 mb-3">
-              <div className="bg-purple-500 rounded-xl p-2">
-                <User className="w-5 h-5 text-white" />
+              <div className="rounded-xl">
+                <img
+                  src={department.ci2Image}
+                  alt={department.ci2}
+                  className="w-15  h-15 rounded-full"
+                />
               </div>
               <h3 className="font-bold text-gray-800 text-lg">
                 Chief Instructor (2nd Shift)

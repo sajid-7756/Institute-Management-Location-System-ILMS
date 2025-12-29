@@ -1,30 +1,49 @@
-import { CiBank } from "react-icons/ci";
-import { Link, NavLink } from "react-router";
+import { NavLink } from "react-router";
+import logo from "/logo.png";
+import { FaGithub } from "react-icons/fa";
+import { Link } from "lucide-react";
 
 const Navbar = () => {
+  // Active link styling function
+  const getNavLinkClass = ({ isActive }) => {
+    return isActive
+      ? "relative font-semibold text-primary after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-gradient-to-r after:from-primary after:to-secondary after:rounded-full"
+      : "relative font-medium text-base-content/70 hover:text-primary transition-colors duration-300";
+  };
+
   const links = (
     <>
       <li>
-        <NavLink>Home</NavLink>
+        <NavLink to="/" className={getNavLinkClass}>
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to={'/departments'}>Departments</NavLink>
+        <NavLink to="/departments" className={getNavLinkClass}>
+          Departments
+        </NavLink>
       </li>
       <li>
-        <NavLink to={'/gallery'}>Gallery</NavLink>
+        <NavLink to="/gallery" className={getNavLinkClass}>
+          Gallery
+        </NavLink>
       </li>
       <li>
-        <NavLink to={'/map'}>Map</NavLink>
+        <NavLink to="/map" className={getNavLinkClass}>
+          Map
+        </NavLink>
       </li>
       <li>
-        <NavLink to={'/others'}>Others</NavLink>
+        <NavLink to="/others" className={getNavLinkClass}>
+          Others
+        </NavLink>
       </li>
     </>
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
-      <div className="flex container mx-auto">
+    <div className="navbar bg-base-100 shadow-md sticky top-0 z-50">
+      <div className="flex justify-between w-7xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -35,34 +54,41 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {" "}
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                />
               </svg>
             </div>
             <ul
-              tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow-lg"
             >
               {links}
             </ul>
           </div>
-          <Link to={'/'} className="text-xl flex items-center gap-2">
-            <CiBank size={30} />{" "}
+          <NavLink
+            to="/"
+            className="text-xl flex items-center gap-2 hover:scale-105 transition-transform duration-300"
+          >
+            <img src={logo} className="w-12 h-12" alt="logo" />
             <span className="font-bold text-primary">ILMS</span>
-          </Link>
+          </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {links}
-          </ul>
+          <ul className="menu menu-horizontal px-1 gap-2">{links}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn btn-primary">Contact Us</a>
+          <a
+            href="https://github.com/sajid-7756/Institute-Management-Location-System-ILMS"
+            target="_blank"
+            className="btn btn-primary hover:scale-105 transition-transform duration-300"
+          >
+            <FaGithub />
+            Contribute
+          </a>
         </div>
       </div>
     </div>

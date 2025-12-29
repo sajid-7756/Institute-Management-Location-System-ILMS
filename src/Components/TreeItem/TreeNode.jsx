@@ -37,7 +37,7 @@ const TreeNode = ({ data, onCardClick, level = 0 }) => {
         <div className="flex flex-col items-center text-center relative z-10">
           <div className="bg-white rounded-2xl p-4 mb-3 shadow-md transition-transform">
             {isPrincipal ? (
-              <img src={principal} alt="" />
+              <img src={principal} alt="principal" className="h-40" />
             ) : (
               <User
                 className={`${
@@ -62,16 +62,12 @@ const TreeNode = ({ data, onCardClick, level = 0 }) => {
           {hasChildren && isPrincipal && (
             <button
               onClick={() => setIsExpanded(!isExpanded)}
+              disabled
               className="mt-4 bg-white bg-opacity-25 backdrop-blur-sm rounded-full px-4 py-2 border border-white border-opacity-30 flex items-center gap-2 hover:bg-opacity-35 transition-all text-info"
             >
               <span className="text-xs font-bold">
                 {data.departments.length} Departments
               </span>
-              {isExpanded ? (
-                <ChevronUp className="w-4 h-4" />
-              ) : (
-                <ChevronDown className="w-4 h-4" />
-              )}
             </button>
           )}
         </div>
