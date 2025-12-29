@@ -53,4 +53,4 @@ For developers interested in the tech stack:
 
 ---
 
-*Developed with ❤️ by **Ashik, Nurnobi, Shagor, Tanvin, Rishat, Sompa, Atiah, Toya, Rahul & Sajid** for the community of Bogura Polytechnic Institute.*
+*Developed by **Ashik, Nurnobi, Shagor, Tanvin, Rishat, Sompa, Atiah, Toya, Rahul & Sajid** for the community of Bogura Polytechnic Institute.*
