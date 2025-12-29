@@ -51,7 +51,7 @@ const DepartmentTree = () => {
         <div className="rounded-3xl shadow-2xl p-8 mb-10 text-center border border-gray-100">
           <div className="inline-block text-primary  bg-clip-text mb-3">
             <h1 className="text-5xl font-black">
-              Institute Organizational Structure
+              Welcome to Bogura Polytechnic Institute Office Management System
             </h1>
           </div>
           <p className="text-gray-600 text-lg font-medium">
