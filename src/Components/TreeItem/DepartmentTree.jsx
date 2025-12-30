@@ -136,8 +136,8 @@ const DepartmentTree = () => {
     <section className="py-16">
       <div className="max-w-7xl mx-auto ">
         {/* Hero Section */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <h1 className="text-5xl font-bold text-primary mb-4">
+        <div className="text-center max-w-4xl mx-auto mb-16 px-4">
+          <h1 className="text-3xl md:text-5xl font-bold text-primary mb-4">
             🏛️ Welcome to Bogura Polytechnic Institute
           </h1>
           <p className="text-base-content/80 leading-relaxed text-lg mb-4">
@@ -168,7 +168,7 @@ const DepartmentTree = () => {
         </div>
 
         {/* Tree Container */}
-        <div className="rounded-3xl shadow-xl bg-base-100 p-8 md:p-16 overflow-x-auto border border-base-300">
+        <div className="rounded-3xl shadow-xl bg-base-100 p-4 md:p-16 overflow-x-auto border border-base-300 mx-4 md:mx-0">
           <div className="inline-block min-w-full">
             <TreeNode
               data={instituteData}

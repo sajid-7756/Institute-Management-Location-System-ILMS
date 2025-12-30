@@ -11,30 +11,37 @@ const Navbar = () => {
       : "relative font-medium text-base-content/70 hover:text-primary transition-colors duration-300";
   };
 
+  const handleClick = () => {
+    const elem = document.activeElement;
+    if (elem) {
+      elem.blur();
+    }
+  };
+
   const links = (
     <>
       <li>
-        <NavLink to="/" className={getNavLinkClass}>
+        <NavLink to="/" className={getNavLinkClass} onClick={handleClick}>
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink to="/departments" className={getNavLinkClass}>
+        <NavLink to="/departments" className={getNavLinkClass} onClick={handleClick}>
           Departments
         </NavLink>
       </li>
       <li>
-        <NavLink to="/gallery" className={getNavLinkClass}>
+        <NavLink to="/gallery" className={getNavLinkClass} onClick={handleClick}>
           Gallery
         </NavLink>
       </li>
       <li>
-        <NavLink to="/map" className={getNavLinkClass}>
+        <NavLink to="/map" className={getNavLinkClass} onClick={handleClick}>
           Map
         </NavLink>
       </li>
       <li>
-        <NavLink to="/others" className={getNavLinkClass}>
+        <NavLink to="/others" className={getNavLinkClass} onClick={handleClick}>
           Others
         </NavLink>
       </li>
@@ -42,8 +49,8 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-md sticky top-0 z-50">
-      <div className="flex justify-between w-7xl mx-auto">
+    <div className="navbar bg-base-100 shadow-md sticky top-0 z-50 px-4 md:px-8">
+      <div className="flex justify-between max-w-7xl w-full mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

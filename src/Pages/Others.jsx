@@ -60,7 +60,7 @@ const Others = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading + Long Description */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
             📍 Campus Facilities & Services
           </h2>
           <p className="text-base-content/80 leading-relaxed text-lg">
@@ -91,26 +91,26 @@ const Others = () => {
           {facilities.map((facility, index) => (
             <div
               key={facility.id}
-              className={`flex flex-col md:flex-row items-center gap-10 ${
+              className={`flex flex-col md:flex-row items-center gap-6 md:gap-10 ${
                 index % 2 === 1 ? "md:flex-row-reverse" : ""
               }`}
               data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
               data-aos-duration="1000"
             >
               {/* Image */}
-              <div className="md:w-1/2">
+              <div className="w-full md:w-1/2">
                 <img
                   src={facility.image}
                   alt={facility.name}
-                  className="rounded-2xl shadow-xl w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
+                  className="rounded-2xl shadow-xl w-full h-64 md:h-80 object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
 
               {/* Content */}
-              <div className="md:w-1/2 space-y-4">
-                <div className="flex items-center gap-3">
+              <div className="w-full md:w-1/2 space-y-4 text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3">
                   {facility.icon}
-                  <h3 className="text-2xl font-semibold">{facility.name}</h3>
+                  <h3 className="text-xl md:text-2xl font-semibold">{facility.name}</h3>
                 </div>
                 <p className="text-base-content/80 leading-relaxed">
                   {facility.desc}
