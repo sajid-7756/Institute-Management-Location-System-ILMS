@@ -2,6 +2,22 @@
  @plugin "daisyui" {
    themes: light --default;
  }
+
+ :root {
+   --primary: #10b981;
+   --primary-focus: #059669;
+   --secondary: #0f172a;
+   --accent: #34d399;
+   --neutral: #1f2937;
+   --base-100: #ffffff;
+   --base-200: #f8fafc;
+   --base-300: #f1f5f9;
+ }
+
+ [data-theme='light'] {
+   --color-primary: var(--primary);
+   --color-secondary: var(--secondary);
+ }
  
  @keyframes fadeIn {
   from {

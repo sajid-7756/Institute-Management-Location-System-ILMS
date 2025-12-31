@@ -7,8 +7,8 @@ const Navbar = () => {
   // Active link styling function
   const getNavLinkClass = ({ isActive }) => {
     return isActive
-      ? "relative font-semibold text-primary after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-gradient-to-r after:from-primary after:to-secondary after:rounded-full"
-      : "relative font-medium text-base-content/70 hover:text-primary transition-colors duration-300";
+      ? "relative font-bold text-primary after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[3px] after:bg-primary after:rounded-full"
+      : "relative font-semibold text-secondary/70 hover:text-primary transition-all duration-300 hover:scale-105";
   };
 
   const handleClick = () => {
@@ -91,10 +91,10 @@ const Navbar = () => {
           <a
             href="https://github.com/sajid-7756/Institute-Management-Location-System-ILMS"
             target="_blank"
-            className="btn btn-primary hover:scale-105 transition-transform duration-300"
+            className="btn bg-secondary hover:bg-secondary/90 text-white border-none px-6 shadow-lg shadow-secondary/20 hover:scale-105 transition-all duration-300"
           >
-            <FaGithub />
-            Contribute
+            <FaGithub className="text-xl" />
+            <span className="hidden sm:inline">Contribute</span>
           </a>
         </div>
       </div>
