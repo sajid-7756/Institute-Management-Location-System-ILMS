@@ -28,10 +28,6 @@ const campusData = [
     answer: "Great! What would you like to know about the campus?",
   },
   {
-    keywords: ["no", "nope"],
-    answer: "No problem 👍 If you need help later, just ask.",
-  },
-  {
     keywords: ["bye", "goodbye"],
     answer: "Goodbye 👋 Have a nice day on campus!",
   },
@@ -127,38 +123,59 @@ const campusData = [
       "You can find the campus map in the navigation bar. Click on the 'Map' option.",
   },
   {
+    keywords: ["namaj ghar", "prayer room", "mosque", "masjid"],
+    answer:
+      "The prayer room (Namaj Ghar) is located to the east of the Academic Building.",
+  },
+  {
+    keywords: [
+      "vice principal",
+      "vice principal room",
+      "vp room",
+      "vice principal office",
+    ],
+    answer:
+      "The Vice Principal’s office is located in room number 215 of the Academic Building.",
+  },
+  {
+    keywords: ["placement cell", "career cell", "job placement"],
+    answer:
+      "The Placement Cell is located to the east of the Principal’s room.",
+  },
+  {
     keywords: ["cst", "computer", "computer science"],
     answer:
-      "The CST department is located on the 2nd floor of the New Building.",
+      "The CST department is located on the 2nd floor of the New Building. CI-1 is on the west side, and CI-2 is on the east side of the building.",
   },
   {
     keywords: ["civil", "civil engineering"],
     answer:
-      "The Civil Engineering department is located in the Academic Building.",
+      "The Civil Engineering department is located on the 2nd floor of the Academic Building, east of the seminar room. Both CI-1 and CI-2 are in the same area.",
   },
   {
     keywords: ["mechanical", "mechanical engineering"],
     answer:
-      "The Mechanical Engineering department is located in the Academic Building.",
+      "The Mechanical Engineering department is located on the 2nd floor of the Academic Building, in front of the Civil Engineering department. Both CI-1 and CI-2 are in this location.",
   },
   {
     keywords: ["electrical", "electrical engineering"],
     answer:
-      "The Electrical Engineering department is located in the Academic Building.",
+      "The Electrical Engineering department is located on the 2nd floor of the Academic Building (east side). CI-1 is east of room no. 0206, and CI-2 is west of room no. 0206.",
   },
   {
     keywords: ["electronics", "electronics engineering"],
     answer:
-      "The Electronics Engineering department is located in the Academic Building.",
+      "The Electronics Engineering department has two locations: CI-1 is on the 2nd floor of the Academic Building (west side), and CI-2 is on the 3rd floor of the Academic Building (west side).",
   },
   {
     keywords: ["power", "power engineering"],
     answer:
-      "The Power Engineering department is located in the Academic Building.",
+      "The Power Engineering department is located on the 2nd floor of the Academic Building (east side). Both CI-1 and CI-2 are west of room no. 0206.",
   },
   {
     keywords: ["rac", "refrigeration", "refrigeration and air conditioning"],
-    answer: "The RAC department is located in the Academic Building.",
+    answer:
+      "The RAC department is located in the New Building. CI-1 is on the 3rd floor (east side), and CI-2 is on the 3rd floor (west side).",
   },
 ];
 

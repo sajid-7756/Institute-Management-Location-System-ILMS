@@ -21,51 +21,65 @@ const departments = [
   {
     id: 1,
     name: "Computer Science & Technology (CST)",
-    desc: "Explores software engineering, AI, and cutting-edge computing solutions that shape the digital future.",
+    desc: "Focuses on software development, web and mobile technologies, databases, networking, and modern computing systems that power today’s digital world.",
     icon: <FaLaptopCode className="text-4xl text-primary" />,
     image: cstSm2,
+    location:
+      "2nd floor, New Building — CI-1 on the west side, CI-2 on the east side",
   },
   {
     id: 2,
     name: "Civil Engineering",
-    desc: "Designs sustainable infrastructure including bridges, roads, and smart cities for modern living.",
+    desc: "Deals with planning, design, and construction of infrastructure such as buildings, roads, bridges, and water systems with an emphasis on safety and sustainability.",
     icon: <FaDraftingCompass className="text-4xl text-secondary" />,
     image: civilSm,
+    location:
+      "2nd floor, Academic Building — east of the seminar room (CI-1 & CI-2)",
   },
   {
     id: 3,
     name: "Mechanical Engineering",
-    desc: "Focuses on machines, robotics, and manufacturing systems that power industries worldwide.",
+    desc: "Covers mechanics, manufacturing, thermal engineering, and machine design that support industrial production and mechanical systems.",
     icon: <FaCogs className="text-4xl text-accent" />,
     image: mechanicalSm,
+    location:
+      "2nd floor, Academic Building — in front of the Civil Engineering department (CI-1 & CI-2)",
   },
   {
     id: 4,
     name: "Electrical Engineering",
-    desc: "Specializes in circuits, automation, and smart power systems driving innovation in technology.",
+    desc: "Concentrates on electrical circuits, machines, power control, and automation systems essential for modern electrical infrastructure.",
     icon: <FaBolt className="text-4xl text-warning" />,
     image: elecSm,
+    location:
+      "2nd floor, Academic Building (East side) — CI-1 east of room 0206, CI-2 west of room 0206",
   },
   {
     id: 5,
     name: "Power Engineering",
-    desc: "Dedicated to energy generation, renewable sources, and efficient transmission networks.",
+    desc: "Specializes in power generation, transmission, distribution, and renewable energy systems to meet growing energy demands efficiently.",
     icon: <FaSolarPanel className="text-4xl text-success" />,
     image: powerSm,
+    location:
+      "2nd floor, Academic Building (East side) — west of room 0206 (CI-1 & CI-2)",
   },
   {
     id: 6,
     name: "Refrigeration & Air Conditioning (RAC)",
-    desc: "Covers HVAC systems, cooling technologies, and sustainable thermal solutions.",
+    desc: "Focuses on HVAC systems, refrigeration technology, cooling methods, and climate control for residential and industrial applications.",
     icon: <FaSnowflake className="text-4xl text-info" />,
     image: racSm,
+    location:
+      "New Building, 3rd floor — CI-1 on the east side, CI-2 on the west side",
   },
   {
     id: 7,
     name: "Electronics Engineering",
-    desc: "Deals with embedded systems, microelectronics, and communication technologies.",
+    desc: "Emphasizes electronic circuits, embedded systems, microcontrollers, and communication technologies used in modern devices.",
     icon: <FaMicrochip className="text-4xl text-error" />,
     image: electronicsSm,
+    location:
+      "Academic Building — CI-1 on the 2nd floor (west side), CI-2 on the 3rd floor (west side)",
   },
 ];
 
@@ -129,8 +143,11 @@ const Department = () => {
               <p className="text-base-content/80 leading-relaxed">
                 {dept.desc}
               </p>
+              <p className="text-base-content/80 leading-relaxed">
+                Location: {dept.location}
+              </p>
               <button
-                onClick={() => toast("This feature is comming soon")}
+                onClick={() => toast("This feature is coming soon")}
                 className="btn btn-outline btn-primary btn-sm mt-3"
               >
                 Learn More

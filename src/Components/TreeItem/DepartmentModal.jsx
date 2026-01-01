@@ -66,7 +66,9 @@ const DepartmentModal = ({ department, onClose }) => {
             <p className="font-bold text-gray-800">
               Phone: {department.ci1Phone}
             </p>
-            <p className="font-bold text-gray-800">Location: </p>
+            <p className="font-bold text-gray-800">
+              Location: {department.ci1Location}
+            </p>
           </div>
 
           <div className="bg-linear-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-100">
@@ -89,7 +91,9 @@ const DepartmentModal = ({ department, onClose }) => {
             <p className="font-bold text-gray-800">
               Phone: {department.ci2Phone}
             </p>
-            <p className="font-bold text-gray-800">Location: </p>
+            <p className="font-bold text-gray-800">
+              Location: {department.ci2Location}
+            </p>
           </div>
         </div>
 

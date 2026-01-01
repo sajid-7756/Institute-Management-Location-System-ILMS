@@ -5,6 +5,8 @@ import {
   FaMosque,
   FaUtensils,
   FaShieldAlt,
+  FaBriefcase,
+  FaHospital,
 } from "react-icons/fa";
 import { MdHealthAndSafety } from "react-icons/md";
 import toast from "react-hot-toast";
@@ -12,47 +14,87 @@ import toast from "react-hot-toast";
 const facilities = [
   {
     id: 1,
-    name: "Registers Office",
-    desc: "Central administrative hub managing student records, certificates, transcripts, and official documentation services with efficient and friendly support.",
+    name: "Registrar’s Office",
+    desc: "The central administrative office responsible for managing student records, academic certificates, transcripts, registrations, and official documentation, ensuring smooth academic administration and student support.",
     icon: <FaClipboardList className="text-4xl text-primary" />,
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop", // Office workspace
+    image:
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
+    location:
+      "2nd floor, Academic Building — west of room number 211",
   },
   {
     id: 2,
     name: "Student Hostel",
-    desc: "Comfortable residential facilities providing safe accommodation, dining, and community living spaces for students with 24/7 security and support.",
+    desc: "On-campus residential facilities providing safe and comfortable accommodation for students, with essential amenities, dining services, and a supportive community environment.",
     icon: <FaBed className="text-4xl text-secondary" />,
-    image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&h=600&fit=crop", // Building exterior
+    image:
+      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&h=600&fit=crop",
+    location:
+      "North Hostel: west of the Academic Building; South Hostel: west of the field",
   },
   {
     id: 3,
     name: "Rover & Red Crescent",
-    desc: "Dedicated to health awareness, emergency response, blood donation drives, and community service initiatives that make a real difference.",
+    desc: "Student-led volunteer organizations focused on health awareness, first aid training, emergency response, blood donation campaigns, and humanitarian service within and beyond the campus.",
     icon: <MdHealthAndSafety className="text-4xl text-error" />,
-    image: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=800&h=600&fit=crop", // Healthcare/volunteers
+    image:
+      "https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=800&h=600&fit=crop",
+    location:
+      "East–south corner of the Academic Building",
   },
   {
     id: 4,
     name: "Institute Mosque",
-    desc: "Peaceful prayer facility offering daily prayers, Friday congregations, and spiritual guidance for the campus community in a serene environment.",
+    desc: "A peaceful and spiritual prayer facility for students, teachers, and staff, accommodating daily prayers, Jumu’ah congregations, and religious gatherings in a calm environment.",
     icon: <FaMosque className="text-4xl text-success" />,
-    image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=800&h=600&fit=crop", // Mosque
+    image:
+      "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=800&h=600&fit=crop",
+    location:
+      "West of the New Building",
   },
   {
     id: 5,
     name: "Campus Canteen",
-    desc: "Hygienic dining facility serving nutritious meals, snacks, and beverages at affordable prices throughout the day with a variety of options.",
+    desc: "A hygienic dining facility offering affordable meals, snacks, and beverages for students and staff, ensuring quality food and a comfortable eating space throughout the day.",
     icon: <FaUtensils className="text-4xl text-warning" />,
-    image: "https://images.unsplash.com/photo-1567521464027-f127ff144326?w=800&h=600&fit=crop", // Cafeteria
+    image:
+      "https://images.unsplash.com/photo-1567521464027-f127ff144326?w=800&h=600&fit=crop",
+    location:
+      "Beside the student hostel area",
   },
   {
     id: 6,
     name: "Control Room",
-    desc: "24/7 security monitoring center ensuring campus safety, emergency response coordination, and visitor management for a secure learning environment.",
+    desc: "A dedicated security and monitoring center operating 24/7 to ensure campus safety, manage emergencies, monitor surveillance systems, and coordinate rapid response when needed.",
     icon: <FaShieldAlt className="text-4xl text-info" />,
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop", // Control room/monitors
+    image:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+    location:
+      "Room number 215, 2nd floor of the Academic Building",
   },
+  {
+    id: 7,
+    name: "Placement Cell",
+    desc: "A career development and placement support unit that assists students with job opportunities, internships, career guidance, employer connections, and skill development programs.",
+    icon: <FaBriefcase className="text-4xl text-accent" />,
+    image:
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop",
+    location:
+      "2nd floor of the Academic Building — east of the Principal’s room",
+  },
+  {
+  id: 8,
+  name: "Medical Center",
+  desc: "An on-campus healthcare facility providing basic medical treatment, first aid, health checkups, and emergency support for students, teachers, and staff, ensuring quick access to medical assistance when needed.",
+  icon: <FaHospital className="text-4xl text-rose-500" />,
+  image:
+    "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&h=600&fit=crop",
+  location:
+    "2nd floor of the Academic Building — east side, immediately to the right after finishing the stairs",
+}
+
 ];
+
 
 const Others = () => {
   return (
@@ -115,6 +157,10 @@ const Others = () => {
                 <p className="text-base-content/80 leading-relaxed">
                   {facility.desc}
                 </p>
+                <p className="text-base-content/80 leading-relaxed">
+                  Location: {facility.location}
+                </p>
+                
                 <button
                   onClick={() => toast("This feature is coming soon")}
                   className="btn btn-outline btn-primary btn-sm mt-3"
