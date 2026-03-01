@@ -89,7 +89,8 @@ const campusData = [
   },
   {
     keywords: ["girls hostel", "karatoa", "karatoa girls hostel"],
-    answer: "The Karatoa Girls Hostel is a separate hostel inside the campus.",
+    answer:
+      "The Karatoa Girls Hostel is a separate hostel inside the campus. It's on the opposite side of the vice principal's quatre",
   },
   {
     keywords: ["hostel", "residential"],
