@@ -178,6 +178,15 @@ const campusData = [
     answer:
       "The RAC department is located in the New Building. CI-1 is on the 3rd floor (east side), and CI-2 is on the 3rd floor (west side).",
   },
+  {
+    keywords: [
+      "library",
+      "where is the institute library",
+      "where is the library",
+    ],
+    answer:
+      "Located on the 3rd floor of the Academic Building. Room number 309",
+  },
 ];
 
 export default campusData;

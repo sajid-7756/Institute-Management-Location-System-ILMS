@@ -7,6 +7,7 @@ import {
   FaShieldAlt,
   FaBriefcase,
   FaHospital,
+  FaUserMd,
 } from "react-icons/fa";
 import { MdHealthAndSafety } from "react-icons/md";
 import toast from "react-hot-toast";
@@ -19,8 +20,7 @@ const facilities = [
     icon: <FaClipboardList className="text-4xl text-primary" />,
     image:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
-    location:
-      "2nd floor, Academic Building — west of room number 211",
+    location: "2nd floor, Academic Building — west of room number 211",
   },
   {
     id: 2,
@@ -39,8 +39,7 @@ const facilities = [
     icon: <MdHealthAndSafety className="text-4xl text-error" />,
     image:
       "https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=800&h=600&fit=crop",
-    location:
-      "East–south corner of the Academic Building",
+    location: "East–south corner of the Academic Building",
   },
   {
     id: 4,
@@ -49,8 +48,7 @@ const facilities = [
     icon: <FaMosque className="text-4xl text-success" />,
     image:
       "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=800&h=600&fit=crop",
-    location:
-      "West of the New Building",
+    location: "West of the New Building",
   },
   {
     id: 5,
@@ -59,8 +57,7 @@ const facilities = [
     icon: <FaUtensils className="text-4xl text-warning" />,
     image:
       "https://images.unsplash.com/photo-1567521464027-f127ff144326?w=800&h=600&fit=crop",
-    location:
-      "Beside the student hostel area",
+    location: "Beside the student hostel area",
   },
   {
     id: 6,
@@ -69,8 +66,7 @@ const facilities = [
     icon: <FaShieldAlt className="text-4xl text-info" />,
     image:
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
-    location:
-      "Room number 215, 2nd floor of the Academic Building",
+    location: "Room number 215, 2nd floor of the Academic Building",
   },
   {
     id: 7,
@@ -83,18 +79,26 @@ const facilities = [
       "2nd floor of the Academic Building — east of the Principal’s room",
   },
   {
-  id: 8,
-  name: "Medical Center",
-  desc: "An on-campus healthcare facility providing basic medical treatment, first aid, health checkups, and emergency support for students, teachers, and staff, ensuring quick access to medical assistance when needed.",
-  icon: <FaHospital className="text-4xl text-rose-500" />,
-  image:
-    "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&h=600&fit=crop",
-  location:
-    "2nd floor of the Academic Building — east side, immediately to the right after finishing the stairs",
-}
-
+    id: 8,
+    name: "Medical Center",
+    desc: "An on-campus healthcare facility providing basic medical treatment, first aid, health checkups, and emergency support for students, teachers, and staff, ensuring quick access to medical assistance when needed.",
+    icon: <FaHospital className="text-4xl text-rose-500" />,
+    image:
+      "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&h=600&fit=crop",
+    location:
+      "2nd floor of the Academic Building — east side, immediately to the right after finishing the stairs",
+  },
+  {
+    id: 9,
+    name: "Institute Medical Center",
+    desc: "The Institute Medical Center is a dedicated on-campus healthcare facility that offers primary medical care, first aid, routine health checkups, and emergency assistance. It ensures students, teachers, and staff receive timely and professional medical support in a safe and caring environment.",
+    icon: <FaUserMd className="text-4xl text-rose-500" />,
+    image:
+      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGxpYnJhcnl8ZW58MHx8MHx8fDA%3D",
+    location:
+      "Located on the 3rd floor of the Academic Building. Room number 309",
+  },
 ];
-
 
 const Others = () => {
   return (
@@ -152,7 +156,9 @@ const Others = () => {
               <div className="w-full md:w-1/2 space-y-4 text-center md:text-left">
                 <div className="flex items-center justify-center md:justify-start gap-3">
                   {facility.icon}
-                  <h3 className="text-xl md:text-2xl font-semibold">{facility.name}</h3>
+                  <h3 className="text-xl md:text-2xl font-semibold">
+                    {facility.name}
+                  </h3>
                 </div>
                 <p className="text-base-content/80 leading-relaxed">
                   {facility.desc}
@@ -160,7 +166,7 @@ const Others = () => {
                 <p className="text-base-content/80 leading-relaxed">
                   Location: {facility.location}
                 </p>
-                
+
                 <button
                   onClick={() => toast("This feature is coming soon")}
                   className="btn btn-outline btn-primary btn-sm mt-3"
@@ -177,4 +183,3 @@ const Others = () => {
 };
 
 export default Others;
-
