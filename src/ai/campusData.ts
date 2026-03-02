@@ -1,9 +1,15 @@
-const campusData = [
+export interface CampusEntry {
+  keywords: string[];
+  answer: string;
+}
+
+const campusData: CampusEntry[] = [
   {
     keywords: ["your name", "what is your name", "who are you called"],
     answer:
       "My name is BPI Bot 🤖. I am the Campus AI Assistant created to help with campus navigation and information.",
   },
+
   {
     keywords: ["bpi bot", "bot name"],
     answer: "I’m BPI Bot 🤖, your friendly campus guide.",

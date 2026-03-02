@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   const handleClick = () => {
-    const elem = document.activeElement;
+    const elem = document.activeElement as HTMLElement | null;
     if (elem) {
       elem.blur();
     }
